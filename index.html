@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Break News</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div class="container-xl">
+    
+    
+    <h2 class="text-info text-center pt-4 m-0">Break News</h2>
+    <form class="js-news-form pt-3 pb-4 d-flex justify-content-center gap-3 row" action="" method="get">
+      <input class="rounded col-6 form-control w-25 js-news-serch-input" placeholder="Search" aria-label="news-saerch" type="search">
+      <select class="rounded js-news-serch-select col-6 form-select w-25" aria-label="select-catigori" name="" id="">
+        <option value="popularity">popularity</option>
+        <option value="publishedAt">publishedAt</option>
+        <option value="relevancy">relevancy</option>
+      </select>
+    </form>
+    
+      <ul class="js-news-list row gap-4 pt-4 justify-content-center ">
+        
+      </ul>
+      </div>
+    
+    <template id="news-template">
+      <li class="card news-item col-sm-4 col-md-3 col-lg-2 mb-5">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          
+          <div class="d-flex gap-3 pt-5 btn-box">
+            <a href="#" class="btn btn-primary news-link" target="_blank">News link</a>
+            <button type="button" class="btn btn-primary modal-btn news_modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Modal
+            </button>
+          </div>
+        </div>
+      </li>
+    </template>
+
+    
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-info" id="staticBackdropLabel">News info</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <ul class="modal_list list-unstyled">
+        <template class="modal_template">
+
+          <li>
+            <p class="modal_text"></p>
+            <time class="news-time time fw-bold" datetime="2008-02-14 20:00"></time>
+          </li>
+        </template>
+      </ul>
+      </div>
+     
+    </div>
+  </div>
+</div>
+    
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+  </html>
